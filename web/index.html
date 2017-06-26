@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quotes of the day</title>
+    </head>
+    <body>
+        <h1>Welcome the the Quotes of the day</h1>
+        <h4>Submit your Quote of today</h4>
+        <form action="#" name="quoteForm">
+            <input type="email" name="userId" value="" placeholder="Your email" required>
+            <br/>
+            <textarea rows="4" cols="50" name="quote" form="quoteForm" value="" placeholder="Your quote of the day" required>The mind is like a parachute, it does not work if it's not opened. Frank Zappa 
+            </textarea>
+            
+            <br/>
+            <input type="submit" value="OK">
+        </form>
+        
+        <h2>Your quotes</h2>
+        <span id="numberofYourQuotes"></span>
+        <ul id="yourQuotes">
+            <li><q>Really ?</q></li>
+        </ul>
+
+        <h2>All quotes</h2>
+        <span id="numberofAllQuotes"></span>
+        <ul id="allQuotes">
+            
+        </ul>
+
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.77.0.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="script.js"></script>
+    </body>
+</html>

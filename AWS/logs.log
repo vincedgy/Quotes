@@ -1,0 +1,144 @@
+06/26/2017 03:38:43 PM root         INFO     Starting 2_CreateDynamoTable.py:__main__
+06/26/2017 03:38:43 PM botocore.credentials INFO     Found credentials in shared credentials file: ~/.aws/credentials
+06/26/2017 03:38:43 PM botocore.vendored.requests.packages.urllib3.connectionpool INFO     Starting new HTTPS connection (1): dynamodb.eu-west-1.amazonaws.com
+06/26/2017 03:38:44 PM root         INFO     Table Quotes status is ACTIVE
+06/26/2017 03:53:34 PM root         INFO     Starting 2_CreateDynamoTable.py:__main__
+06/26/2017 03:53:34 PM botocore.credentials INFO     Found credentials in shared credentials file: ~/.aws/credentials
+06/26/2017 03:53:34 PM botocore.vendored.requests.packages.urllib3.connectionpool INFO     Starting new HTTPS connection (1): dynamodb.eu-west-1.amazonaws.com
+06/26/2017 03:53:35 PM root         INFO     Table Quotes status is ACTIVE
+06/26/2017 03:53:57 PM root         INFO     Starting 2_CreateDynamoTable.py:__main__
+06/26/2017 03:53:57 PM botocore.credentials DEBUG    Looking for credentials via: env
+06/26/2017 03:53:57 PM botocore.credentials DEBUG    Looking for credentials via: assume-role
+06/26/2017 03:53:57 PM botocore.credentials DEBUG    Looking for credentials via: shared-credentials-file
+06/26/2017 03:53:57 PM botocore.credentials INFO     Found credentials in shared credentials file: ~/.aws/credentials
+06/26/2017 03:53:57 PM botocore.loaders DEBUG    Loading JSON file: /Users/vincent/Projects/GoogleCloudPlatform/venv/lib/python2.7/site-packages/botocore/data/endpoints.json
+06/26/2017 03:53:57 PM botocore.loaders DEBUG    Loading JSON file: /Users/vincent/Projects/GoogleCloudPlatform/venv/lib/python2.7/site-packages/botocore/data/dynamodb/2012-08-10/service-2.json
+06/26/2017 03:53:57 PM botocore.loaders DEBUG    Loading JSON file: /Users/vincent/Projects/GoogleCloudPlatform/venv/lib/python2.7/site-packages/botocore/data/_retry.json
+06/26/2017 03:53:57 PM botocore.client DEBUG    Registering retry handlers for service: dynamodb
+06/26/2017 03:53:57 PM botocore.hooks DEBUG    Event creating-client-class.dynamodb: calling handler <function add_generate_presigned_url at 0x1082d9500>
+06/26/2017 03:53:57 PM botocore.args DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+06/26/2017 03:53:57 PM botocore.endpoint DEBUG    Setting dynamodb timeout as (60, 60)
+06/26/2017 03:53:57 PM botocore.hooks DEBUG    Event before-parameter-build.dynamodb.DescribeTable: calling handler <function generate_idempotent_uuid at 0x108308b90>
+06/26/2017 03:53:57 PM botocore.endpoint DEBUG    Making request for OperationModel(name=DescribeTable) (verify_ssl=True) with params: {'body': '{"TableName": "Quotes"}', 'url': u'https://dynamodb.eu-west-1.amazonaws.com/', 'headers': {'User-Agent': 'Boto3/1.4.4 Python/2.7.13 Darwin/16.6.0 Botocore/1.5.75', 'Content-Type': u'application/x-amz-json-1.0', 'X-Amz-Target': u'DynamoDB_20120810.DescribeTable'}, 'context': {'auth_type': None, 'client_region': 'eu-west-1', 'has_streaming_input': False, 'client_config': <botocore.config.Config object at 0x1086e50d0>}, 'query_string': '', 'url_path': '/', 'method': u'POST'}
+06/26/2017 03:53:57 PM botocore.hooks DEBUG    Event request-created.dynamodb.DescribeTable: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x108658f90>>
+06/26/2017 03:53:57 PM botocore.hooks DEBUG    Event choose-signer.dynamodb.DescribeTable: calling handler <function set_operation_specific_signer at 0x108308aa0>
+06/26/2017 03:53:57 PM botocore.auth DEBUG    Calculating signature using v4 auth.
+06/26/2017 03:53:57 PM botocore.auth DEBUG    CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:dynamodb.eu-west-1.amazonaws.com
+x-amz-date:20170626T135357Z
+x-amz-target:DynamoDB_20120810.DescribeTable
+
+content-type;host;x-amz-date;x-amz-target
+7062dfb47a02436a2c7db71a1dce5660fbe1a71accf26f51e86ce40560fa5a86
+06/26/2017 03:53:57 PM botocore.auth DEBUG    StringToSign:
+AWS4-HMAC-SHA256
+20170626T135357Z
+20170626/eu-west-1/dynamodb/aws4_request
+256f07de45e20a81cadb053934ecf1257aa7488245770f52703e5ccf2a607893
+06/26/2017 03:53:57 PM botocore.auth DEBUG    Signature:
+7276df5d18e7fa06c70f614d644c4f32766ab5ca07121f422f1683dc19c202bc
+06/26/2017 03:53:57 PM botocore.endpoint DEBUG    Sending http request: <PreparedRequest [POST]>
+06/26/2017 03:53:57 PM botocore.vendored.requests.packages.urllib3.connectionpool INFO     Starting new HTTPS connection (1): dynamodb.eu-west-1.amazonaws.com
+06/26/2017 03:53:58 PM botocore.vendored.requests.packages.urllib3.connectionpool DEBUG    "POST / HTTP/1.1" 200 458
+06/26/2017 03:53:58 PM botocore.parsers DEBUG    Response headers: {'x-amzn-requestid': '85TPBQL9G80TF21BH1JJU4IR3NVV4KQNSO5AEMVJF66Q9ASUAAJG', 'content-length': '458', 'server': 'Server', 'connection': 'keep-alive', 'x-amz-crc32': '3391701754', 'date': 'Mon, 26 Jun 2017 13:53:58 GMT', 'content-type': 'application/x-amz-json-1.0'}
+06/26/2017 03:53:58 PM botocore.parsers DEBUG    Response body:
+{"Table":{"AttributeDefinitions":[{"AttributeName":"id","AttributeType":"S"}],"CreationDateTime":1.49848303509E9,"ItemCount":0,"KeySchema":[{"AttributeName":"id","KeyType":"HASH"}],"ProvisionedThroughput":{"NumberOfDecreasesToday":0,"ReadCapacityUnits":1,"WriteCapacityUnits":1},"TableArn":"arn:aws:dynamodb:eu-west-1:441481051737:table/Quotes","TableId":"741f7548-c5fd-4137-a02c-84fdc5a63c94","TableName":"Quotes","TableSizeBytes":0,"TableStatus":"ACTIVE"}}
+06/26/2017 03:53:58 PM botocore.hooks DEBUG    Event needs-retry.dynamodb.DescribeTable: calling handler <botocore.retryhandler.RetryHandler object at 0x1086584d0>
+06/26/2017 03:53:58 PM botocore.retryhandler DEBUG    No retry needed.
+06/26/2017 03:53:58 PM root         INFO     Table Quotes status is ACTIVE
+06/26/2017 03:54:19 PM root         INFO     Starting 2_CreateDynamoTable.py:__main__
+06/26/2017 03:54:19 PM botocore.credentials DEBUG    Looking for credentials via: env
+06/26/2017 03:54:19 PM botocore.credentials DEBUG    Looking for credentials via: assume-role
+06/26/2017 03:54:19 PM botocore.credentials DEBUG    Looking for credentials via: shared-credentials-file
+06/26/2017 03:54:19 PM botocore.credentials INFO     Found credentials in shared credentials file: ~/.aws/credentials
+06/26/2017 03:54:19 PM botocore.loaders DEBUG    Loading JSON file: /Users/vincent/Projects/GoogleCloudPlatform/venv/lib/python2.7/site-packages/botocore/data/endpoints.json
+06/26/2017 03:54:19 PM botocore.loaders DEBUG    Loading JSON file: /Users/vincent/Projects/GoogleCloudPlatform/venv/lib/python2.7/site-packages/botocore/data/dynamodb/2012-08-10/service-2.json
+06/26/2017 03:54:19 PM botocore.loaders DEBUG    Loading JSON file: /Users/vincent/Projects/GoogleCloudPlatform/venv/lib/python2.7/site-packages/botocore/data/_retry.json
+06/26/2017 03:54:19 PM botocore.client DEBUG    Registering retry handlers for service: dynamodb
+06/26/2017 03:54:19 PM botocore.hooks DEBUG    Event creating-client-class.dynamodb: calling handler <function add_generate_presigned_url at 0x110a5a500>
+06/26/2017 03:54:19 PM botocore.args DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+06/26/2017 03:54:19 PM botocore.endpoint DEBUG    Setting dynamodb timeout as (60, 60)
+06/26/2017 03:54:19 PM botocore.hooks DEBUG    Event before-parameter-build.dynamodb.DescribeTable: calling handler <function generate_idempotent_uuid at 0x110a89b90>
+06/26/2017 03:54:19 PM botocore.endpoint DEBUG    Making request for OperationModel(name=DescribeTable) (verify_ssl=True) with params: {'body': '{"TableName": "Quotes"}', 'url': u'https://dynamodb.eu-west-1.amazonaws.com/', 'headers': {'User-Agent': 'Boto3/1.4.4 Python/2.7.13 Darwin/16.6.0 Botocore/1.5.75', 'Content-Type': u'application/x-amz-json-1.0', 'X-Amz-Target': u'DynamoDB_20120810.DescribeTable'}, 'context': {'auth_type': None, 'client_region': 'eu-west-1', 'has_streaming_input': False, 'client_config': <botocore.config.Config object at 0x110e660d0>}, 'query_string': '', 'url_path': '/', 'method': u'POST'}
+06/26/2017 03:54:19 PM botocore.hooks DEBUG    Event request-created.dynamodb.DescribeTable: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x110dd9f90>>
+06/26/2017 03:54:19 PM botocore.hooks DEBUG    Event choose-signer.dynamodb.DescribeTable: calling handler <function set_operation_specific_signer at 0x110a89aa0>
+06/26/2017 03:54:19 PM botocore.auth DEBUG    Calculating signature using v4 auth.
+06/26/2017 03:54:19 PM botocore.auth DEBUG    CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:dynamodb.eu-west-1.amazonaws.com
+x-amz-date:20170626T135419Z
+x-amz-target:DynamoDB_20120810.DescribeTable
+
+content-type;host;x-amz-date;x-amz-target
+7062dfb47a02436a2c7db71a1dce5660fbe1a71accf26f51e86ce40560fa5a86
+06/26/2017 03:54:19 PM botocore.auth DEBUG    StringToSign:
+AWS4-HMAC-SHA256
+20170626T135419Z
+20170626/eu-west-1/dynamodb/aws4_request
+47f2a2e6406ca8321b14bf9df59f16fef0f1cd7d930ee6fb392e97bc92cc9682
+06/26/2017 03:54:19 PM botocore.auth DEBUG    Signature:
+4c3b60e2d7cc06b1b6f2665804646006bc68238ca8bc2070ad18a3efa4fd4254
+06/26/2017 03:54:19 PM botocore.endpoint DEBUG    Sending http request: <PreparedRequest [POST]>
+06/26/2017 03:54:19 PM botocore.vendored.requests.packages.urllib3.connectionpool INFO     Starting new HTTPS connection (1): dynamodb.eu-west-1.amazonaws.com
+06/26/2017 03:54:19 PM botocore.vendored.requests.packages.urllib3.connectionpool DEBUG    "POST / HTTP/1.1" 200 458
+06/26/2017 03:54:19 PM botocore.parsers DEBUG    Response headers: {'x-amzn-requestid': 'VB3JE6PAUQSTRF6GT5RVEHQ0N7VV4KQNSO5AEMVJF66Q9ASUAAJG', 'content-length': '458', 'server': 'Server', 'connection': 'keep-alive', 'x-amz-crc32': '3391701754', 'date': 'Mon, 26 Jun 2017 13:54:19 GMT', 'content-type': 'application/x-amz-json-1.0'}
+06/26/2017 03:54:19 PM botocore.parsers DEBUG    Response body:
+{"Table":{"AttributeDefinitions":[{"AttributeName":"id","AttributeType":"S"}],"CreationDateTime":1.49848303509E9,"ItemCount":0,"KeySchema":[{"AttributeName":"id","KeyType":"HASH"}],"ProvisionedThroughput":{"NumberOfDecreasesToday":0,"ReadCapacityUnits":1,"WriteCapacityUnits":1},"TableArn":"arn:aws:dynamodb:eu-west-1:441481051737:table/Quotes","TableId":"741f7548-c5fd-4137-a02c-84fdc5a63c94","TableName":"Quotes","TableSizeBytes":0,"TableStatus":"ACTIVE"}}
+06/26/2017 03:54:19 PM botocore.hooks DEBUG    Event needs-retry.dynamodb.DescribeTable: calling handler <botocore.retryhandler.RetryHandler object at 0x110dd94d0>
+06/26/2017 03:54:19 PM botocore.retryhandler DEBUG    No retry needed.
+06/26/2017 03:54:19 PM root         INFO     Table Quotes status is ACTIVE
+06/26/2017 03:54:45 PM root         INFO     Starting 2_CreateDynamoTable.py:__main__
+06/26/2017 03:54:45 PM botocore.credentials DEBUG    Looking for credentials via: env
+06/26/2017 03:54:45 PM botocore.credentials DEBUG    Looking for credentials via: assume-role
+06/26/2017 03:54:45 PM botocore.credentials DEBUG    Looking for credentials via: shared-credentials-file
+06/26/2017 03:54:45 PM botocore.credentials INFO     Found credentials in shared credentials file: ~/.aws/credentials
+06/26/2017 03:54:45 PM botocore.loaders DEBUG    Loading JSON file: /Users/vincent/Projects/GoogleCloudPlatform/venv/lib/python2.7/site-packages/botocore/data/endpoints.json
+06/26/2017 03:54:45 PM botocore.loaders DEBUG    Loading JSON file: /Users/vincent/Projects/GoogleCloudPlatform/venv/lib/python2.7/site-packages/botocore/data/dynamodb/2012-08-10/service-2.json
+06/26/2017 03:54:46 PM botocore.loaders DEBUG    Loading JSON file: /Users/vincent/Projects/GoogleCloudPlatform/venv/lib/python2.7/site-packages/botocore/data/_retry.json
+06/26/2017 03:54:46 PM botocore.client DEBUG    Registering retry handlers for service: dynamodb
+06/26/2017 03:54:46 PM botocore.hooks DEBUG    Event creating-client-class.dynamodb: calling handler <function add_generate_presigned_url at 0x102eb2500>
+06/26/2017 03:54:46 PM botocore.args DEBUG    The s3 config key is not a dictionary type, ignoring its value of: None
+06/26/2017 03:54:46 PM botocore.endpoint DEBUG    Setting dynamodb timeout as (60, 60)
+06/26/2017 03:54:46 PM botocore.hooks DEBUG    Event before-parameter-build.dynamodb.DescribeTable: calling handler <function generate_idempotent_uuid at 0x102ee1b90>
+06/26/2017 03:54:46 PM botocore.endpoint DEBUG    Making request for OperationModel(name=DescribeTable) (verify_ssl=True) with params: {'body': '{"TableName": "Quotes"}', 'url': u'https://dynamodb.eu-west-1.amazonaws.com/', 'headers': {'User-Agent': 'Boto3/1.4.4 Python/2.7.13 Darwin/16.6.0 Botocore/1.5.75', 'Content-Type': u'application/x-amz-json-1.0', 'X-Amz-Target': u'DynamoDB_20120810.DescribeTable'}, 'context': {'auth_type': None, 'client_region': 'eu-west-1', 'has_streaming_input': False, 'client_config': <botocore.config.Config object at 0x1032be0d0>}, 'query_string': '', 'url_path': '/', 'method': u'POST'}
+06/26/2017 03:54:46 PM botocore.hooks DEBUG    Event request-created.dynamodb.DescribeTable: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x103231f90>>
+06/26/2017 03:54:46 PM botocore.hooks DEBUG    Event choose-signer.dynamodb.DescribeTable: calling handler <function set_operation_specific_signer at 0x102ee1aa0>
+06/26/2017 03:54:46 PM botocore.auth DEBUG    Calculating signature using v4 auth.
+06/26/2017 03:54:46 PM botocore.auth DEBUG    CanonicalRequest:
+POST
+/
+
+content-type:application/x-amz-json-1.0
+host:dynamodb.eu-west-1.amazonaws.com
+x-amz-date:20170626T135446Z
+x-amz-target:DynamoDB_20120810.DescribeTable
+
+content-type;host;x-amz-date;x-amz-target
+7062dfb47a02436a2c7db71a1dce5660fbe1a71accf26f51e86ce40560fa5a86
+06/26/2017 03:54:46 PM botocore.auth DEBUG    StringToSign:
+AWS4-HMAC-SHA256
+20170626T135446Z
+20170626/eu-west-1/dynamodb/aws4_request
+0cd0338260bd64d01281fa6cfd4fe015353d49efdf4d3ea995cdf005a9d40d9e
+06/26/2017 03:54:46 PM botocore.auth DEBUG    Signature:
+3a28e544e50c5a92e9a32541d045aa4b4472b8e07994ff2c81a3721c6bfe7bc2
+06/26/2017 03:54:46 PM botocore.endpoint DEBUG    Sending http request: <PreparedRequest [POST]>
+06/26/2017 03:54:46 PM botocore.vendored.requests.packages.urllib3.connectionpool INFO     Starting new HTTPS connection (1): dynamodb.eu-west-1.amazonaws.com
+06/26/2017 03:54:46 PM botocore.vendored.requests.packages.urllib3.connectionpool DEBUG    "POST / HTTP/1.1" 200 458
+06/26/2017 03:54:46 PM botocore.parsers DEBUG    Response headers: {'x-amzn-requestid': 'QDASCT2MCNJUJQ4VDDBTOFAOQ3VV4KQNSO5AEMVJF66Q9ASUAAJG', 'content-length': '458', 'server': 'Server', 'connection': 'keep-alive', 'x-amz-crc32': '3391701754', 'date': 'Mon, 26 Jun 2017 13:54:46 GMT', 'content-type': 'application/x-amz-json-1.0'}
+06/26/2017 03:54:46 PM botocore.parsers DEBUG    Response body:
+{"Table":{"AttributeDefinitions":[{"AttributeName":"id","AttributeType":"S"}],"CreationDateTime":1.49848303509E9,"ItemCount":0,"KeySchema":[{"AttributeName":"id","KeyType":"HASH"}],"ProvisionedThroughput":{"NumberOfDecreasesToday":0,"ReadCapacityUnits":1,"WriteCapacityUnits":1},"TableArn":"arn:aws:dynamodb:eu-west-1:441481051737:table/Quotes","TableId":"741f7548-c5fd-4137-a02c-84fdc5a63c94","TableName":"Quotes","TableSizeBytes":0,"TableStatus":"ACTIVE"}}
+06/26/2017 03:54:46 PM botocore.hooks DEBUG    Event needs-retry.dynamodb.DescribeTable: calling handler <botocore.retryhandler.RetryHandler object at 0x1032314d0>
+06/26/2017 03:54:46 PM botocore.retryhandler DEBUG    No retry needed.
+06/26/2017 03:54:46 PM root         INFO     Table Quotes status is ACTIVE
+06/26/2017 03:55:49 PM root         INFO     Starting 2_CreateDynamoTable.py:__main__
+06/26/2017 03:55:49 PM botocore.credentials INFO     Found credentials in shared credentials file: ~/.aws/credentials
+06/26/2017 03:55:49 PM botocore.vendored.requests.packages.urllib3.connectionpool INFO     Starting new HTTPS connection (1): dynamodb.eu-west-1.amazonaws.com
+06/26/2017 03:55:49 PM root         INFO     Table Quotes status is ACTIVE
