@@ -33,13 +33,15 @@ User give its email address for identification
 ## TODOS
 
 ### Create Scripts
- - DynamoDB table creation
- - DynamoDB table deletion
+ [x] DynamoDB table creation
+ [x] DynamoDB table deletion
 
 ### Create HTML page : 
- - install live-server ```sudo npm i -g live-server``` 
- - create an index.html page with jQuery (https://code.jquery.com/) 
- - create the js script wich interacts with Cognito for authentication and DynamoDB for reading data
+ [x] install live-server ```sudo npm i -g live-server``` 
+ [x] create an index.html page with jQuery (https://code.jquery.com/) 
+ [ ] create the js script wich interacts with Cognito for authentication and DynamoDB for reading data
+ [ ] test it on my local machine
+ [ ] push it to an S3 bucket with WebServer and version enabled with appropriate permissions and policy
 
 ### CORS configuration for S3 (if needed)
 
