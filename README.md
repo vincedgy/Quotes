@@ -1,4 +1,4 @@
-# Quotes project
+# `Quotes of the day`
 
 ## Presentation
 
